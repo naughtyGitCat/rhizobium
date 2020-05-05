@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package rpc;
+
+
+message RunLinuxCmdRequest {
+    string reqID =1;
+    string cmd =2;
+    string execDir = 3;
+    string execUser =4;
+    int64 execTimeout=5;
+}
+
+message RunLinuxCmdResponse {
+    string reqID =1;
+    int64 retCode=2;
+    string retContent=3;
+}
+
+service Rhizobium {
+    rpc RunLinuxCmd(RunLinuxCmdRequest) returns (RunLinuxCmdResponse) {};
+}

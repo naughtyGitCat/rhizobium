@@ -1,0 +1,30 @@
+[RabbitMQ]
+host = '127.0.0.1'
+port = 5672
+vhost = 'dba'
+user = 'urn4me'
+password = 'p4ssw0rd'
+exchange = 'rhizobium'
+
+[KafkaLQ]
+host = '127.0.0.1'
+port = 9092
+user = 'franz'
+password = 'kavka'
+default_topic = "Ungeziefer"
+default_partition = 41
+
+[MySQL]
+user = 'root'
+password = 'r00t'
+use_socket = true
+
+[MongoDB]
+user = 'root'
+password = 'r00t'
+
+[Redis]
+password = '1uckyc14y'
+
+[Misc]
+debug = true
